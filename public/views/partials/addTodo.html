@@ -1,0 +1,9 @@
+<h2>Add a new todo</h2>
+<form name="addTodo" novalidate>
+  <div class="form-group">
+    <label(for="title")>Text for new todo:</label> 
+    <input class="form-control" name="title" ng-model="todo.title" required minlength/>
+    <span class="error-msg" ng-show="addTodo.title.$dirty && addTodo.title.$invalid">The length must be more than 10</span>
+  </div>
+  <button class="btn btn-success" ng-disabled="addTodo.title.$invalid" ng-click="save(addTodo)">Create Todo</button>
+</form>

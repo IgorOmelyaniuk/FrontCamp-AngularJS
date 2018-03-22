@@ -1,0 +1,9 @@
+<h2>Edit todo</h2>
+<form name="editTodo" novalidate>
+  <div class="form-group">
+    <label(for="title")>Title for todo:</label>
+    <input name="title" class="form-control" ng-model="todo.title" required minlength/>
+    <span class="error-msg" ng-show="editTodo.title.$dirty && editTodo.title.$invalid">The length must be more than 10</span>
+  </div>
+  <button class="btn btn-success" ng-disabled="editTodo.title.$invalid" ng-click="save(editTodo)">Edit Todo</button>
+</form>

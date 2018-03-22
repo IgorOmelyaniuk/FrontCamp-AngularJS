@@ -1,0 +1,12 @@
+{
+  "name": "angularjs-todos",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "body-parser": "~1.8.1",
+    "date-fns": "^1.29.0",
+    "express": "~4.9.0"
+  }
+}

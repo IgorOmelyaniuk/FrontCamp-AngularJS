@@ -1,0 +1,53 @@
+<div class="row justify-content-center">
+  <div class="input-group col-3">
+    <input type="text" ng-model="term" ng-change="defineTodos()" class="form-control" placeholder="Filter how old is the todo in days" aria-label="Filter how old is the todo in days">
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <h5>Done Todos</h5>
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="pointer" ng-click="sortDoneBy('title')">Todo Title</th>
+          <th class="pointer" ng-click="sortDoneBy('date')">Todo Date</th>
+          <th>Todo Done</th>
+          <th>Todo Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="todo in doneTodos">
+          <td class="pointer" ng-click="editTodo(todo)">{{ todo.title }}</td>
+          <td>{{ todo.date }}</td>
+          <td> <input type="checkbox" ng-checked="todo.completed" ng-click="toggleTodo(todo)"/></td>
+          <td><button class="btn btn-primary" ng-click="deleteTodo(todo)">Delete</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="col offset-1">
+    <h5>New Todos</h5>
+    <table class="table">
+        <thead>
+          <tr>
+            <th class="pointer" ng-click="sortNewBy('title')">Todo Title</th>
+            <th class="pointer" ng-click="sortNewBy('date')">Todo Date</th>
+            <th>Todo Done</th>
+            <th>Todo Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="todo in newTodos">
+            <td class="pointer" ng-click="editTodo(todo)">{{ todo.title }}</td>
+            <td>{{ todo.date }}</td>
+            <td> <input type="checkbox" ng-checked="todo.completed" ng-click="toggleTodo(todo)"/></td>
+            <td>
+              <button class="btn btn-primary" ng-click="deleteTodo(todo)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

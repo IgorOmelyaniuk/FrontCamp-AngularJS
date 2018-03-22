@@ -1,0 +1,24 @@
+.wrapper {
+  padding: 50px;
+}
+
+.row {
+  margin-bottom: 30px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.error-msg {
+  color: #f94e4e;
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+}
+
+.pointer {
+  user-select: none;
+  cursor: pointer;
+}
